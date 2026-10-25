@@ -58,4 +58,4 @@ htmlcov/
 configs/models.local.yaml
 
 # Local downloaded models
-models/
+/models/
