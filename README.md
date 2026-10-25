@@ -1,23 +1,44 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="100%" alt="Δτ-Bench — Pushing Agents Toward a Moving Capability Frontier" />
+<h1>Δτ-Bench: Pushing Agents Toward a Moving Capability Frontier</h1>
 
-<br />
+<p><strong>An executable benchmark for agents that discover, adapt, and improve as tools evolve.</strong></p>
+<p>Multi-turn tasks · Stateful environments · Versioned tools · Outcome-based evaluation</p>
 
-**An executable benchmark for agents that discover, adapt, and improve as tools evolve.**
+<p>
+  <a href="https://github.com/zjunlp/delta-tau-bench"><img src="https://img.shields.io/badge/Code-Delta--Tau--Bench-fc60a8?style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;labelColor=1a1a2e" alt="Code: Delta-Tau-Bench" /></a>
+  <a href="https://huggingface.co/datasets/zjunlp/delta-tau-bench"><img src="https://img.shields.io/badge/Dataset-Hugging%20Face-ffce44?style=for-the-badge&amp;logo=huggingface&amp;logoColor=white&amp;labelColor=1a1a2e" alt="Dataset on Hugging Face" /></a>
+  <!-- Replace the citation anchor with the paper URL when available. -->
+  <a href="#citation"><img src="https://img.shields.io/badge/Paper-Coming%20Soon-ff6b6b?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white&amp;labelColor=1a1a2e" alt="Paper: coming soon" /></a>
+  <a href="https://github.com/zjunlp/delta-tau-bench/stargazers"><img src="https://img.shields.io/github/stars/zjunlp/delta-tau-bench?color=00d9ff&amp;style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;labelColor=1a1a2e" alt="GitHub stars" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-4ecdc4?style=for-the-badge&amp;logo=opensourceinitiative&amp;logoColor=white&amp;labelColor=1a1a2e" alt="License: MIT" /></a>
+</p>
 
-Multi-turn tasks · Stateful environments · Versioned tools · Outcome-based evaluation
-
-[Overview](#overview) · [Installation](#installation) · [Dataset](#dataset) · [Configuration](#configuration)<br />
-[Model-only Baseline](#baseline) · [Steward](#steward) · [Evaluation](#evaluation) · [Practical Guide](#practical-guide)<br />
-[Citation](#citation) · [License](#license)
+<p>If you find this project useful, please consider giving it a ⭐ on GitHub!</p>
 
 </div>
 
 ---
 
+## 📑 Table of Contents
+
+- [✨ Benchmark Overview](#overview)
+- [🚀 Installation](#installation)
+- [🤗 Dataset](#dataset)
+- [🔑 Model and Embedding Configuration](#configuration)
+- [🧪 Model-only Baseline](#baseline)
+- [🛠️ Steward](#steward)
+- [📊 Evaluation and Metrics](#evaluation)
+- [💡 Practical Guide](#practical-guide)
+- [📂 Project Structure](#project-layout)
+- [✍️ Citation](#citation)
+- [📄 License](#license)
+
+---
+
 <a id="overview"></a>
-## 01 · Benchmark overview
+
+## ✨ Benchmark Overview
 
 **Δτ-Bench** evaluates how agents keep pace with changing tool ecosystems. User goals stay fixed while interfaces change, functions split, workflows merge, and alternative tools become available amid overlapping functionality and noisy descriptions. Agents must complete the task, recover from disrupted workflows, and discover more efficient ways to act.
 
@@ -40,7 +61,8 @@ This repository provides the **model-only baseline**, **Steward**, and the **rep
 > **Getting started:** install the package → download the dataset → configure chat and embedding services → run the [baseline](#baseline) or [Steward](#steward). The entry scripts build indices, run tasks, and generate evaluation reports.
 
 <a id="installation"></a>
-## 02 · Installation
+
+## 🚀 Installation
 
 **Python 3.10+ · Bash · CPU-compatible benchmark runner**
 
@@ -77,7 +99,8 @@ python -m pytest -q
 </details>
 
 <a id="dataset"></a>
-## 03 · Prepare the dataset
+
+## 🤗 Dataset
 
 ### Download into `data/`
 
@@ -134,7 +157,8 @@ Data resolution uses an explicit `--data-dir` where supported, then `DTAU_BENCH_
 The released dataset has undergone additional verification and corrections beyond the original version used for the experiments in the paper. Results obtained with this release may therefore differ numerically from those reported in the paper, while the main experimental conclusions remain unchanged.
 
 <a id="configuration"></a>
-## 04 · Configure models and embeddings
+
+## 🔑 Model and Embedding Configuration
 
 The experiment uses three services:
 
@@ -252,7 +276,8 @@ The model may also be a local model directory. Weights are downloaded on first u
 </details>
 
 <a id="baseline"></a>
-## 05 · Run the model-only baseline
+
+## 🧪 Model-only Baseline
 
 The default baseline, `all_tools_iterative_rag`, retrieves tools iteratively from the catalog and lets the model execute the task **without a learned skill library**. Both the agent and simulated-user models use the configuration above.
 
@@ -279,7 +304,8 @@ Each selected version runs all **397 test tasks**. A six-version run contains **
 The one-version example writes trajectories to `experiments/baseline_demo_v1_test/` and its combined report to `experiments/baseline_demo_multi_eval/`.
 
 <a id="steward"></a>
-## 06 · Run Steward
+
+## 🛠️ Steward
 
 **Steward** jointly manages tools and procedural knowledge through incremental skill maintenance and dynamic resource provisioning. It maintains planning, atomic, and tool skills, tracks their dependencies, and updates the agent's available resources through retrieval and on-demand search.
 
@@ -331,7 +357,8 @@ Use a **new experiment name** when changing the version list, models, strategies
 </details>
 
 <a id="evaluation"></a>
-## 07 · Evaluate and report results
+
+## 📊 Evaluation and Metrics
 
 Both entry workflows already run evaluation. The commands below are for inspecting or re-evaluating saved rollouts and **do not call chat or embedding models**.
 
@@ -395,7 +422,8 @@ success × min(reference_path_weight / agent_path_weight, 1)
 **Coverage matters:** `evaluate-multi` checks the complete 397-task test roster for each version. Use `evaluate` for partial diagnostic runs. A single complete version is enough for SPE; IDR/DAR require at least two versions, and the full `v1`–`v6` sequence gives the adjacent transitions used by the benchmark.
 
 <a id="practical-guide"></a>
-## 08 · Practical guide
+
+## 💡 Practical Guide
 
 ### Preview a run
 
@@ -472,7 +500,8 @@ Steward's bootstrap library can be nested under `skills/library/`; the scripts r
 </details>
 
 <a id="project-layout"></a>
-## 09 · Project structure
+
+## 📂 Project Structure
 
 | Path | Purpose |
 | :--- | :--- |
@@ -486,14 +515,22 @@ Steward's bootstrap library can be nested under `skills/library/`; the scripts r
 For individual stages, use `python -m dtau_bench <command> --help`. Available commands include `rollout`, `evaluate`, `evaluate-multi`, `bootstrap`, `evolve`, `build-tool-index`, `build-skill-index`, `chain`, and `validate-data`.
 
 <a id="citation"></a>
-## 10 · Citation
 
-The paper reference and BibTeX citation will be provided here.
+## ✍️ Citation
+
+If you find Δτ-Bench useful in your research, please consider citing our work.
+
+> 📄 **Coming soon:** the paper link and BibTeX citation will be added here.
+
+```bibtex
+% BibTeX citation coming soon.
+```
 
 <a id="license"></a>
-## 11 · License
 
-The licensing terms for the code and dataset will be specified here.
+## 📄 License
+
+The code in this repository is released under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ---
 
