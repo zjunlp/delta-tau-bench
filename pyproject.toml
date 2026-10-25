@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dtau-bench"
+version = "0.1.0"
+description = "A benchmark for multi-turn tool-calling agents under an evolving tool catalog"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "PyYAML>=6.0,<7",
+    "filelock>=3.12,<4",
+    "numpy>=1.26.4,<3",
+    "tqdm>=4.65,<5",
+    "litellm>=1.83,<2",
+    "langchain-core>=1,<2",
+    "langchain-openai>=1,<2",
+    "scikit-learn>=1.3,<2",
+]
+
+[project.optional-dependencies]
+# HTTP embedding endpoints do not need any of these local model packages.
+local-embeddings = [
+    "torch>=2.6,<3",
+    "transformers>=4.56,<5",
+    "sentence-transformers>=5.1,<6",
+]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+dtau-bench = "dtau_bench.cli.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"

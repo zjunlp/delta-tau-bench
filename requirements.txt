@@ -1,0 +1,5 @@
+# Run from this repository's root. pyproject.toml is the dependency source.
+.
+
+# For local embedding models: pip install '.[local-embeddings]'
+# For offline tests: pip install '.[test]'

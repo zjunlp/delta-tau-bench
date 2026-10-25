@@ -1,0 +1,11 @@
+# Strategy: train_steward
+
+strategy: train_steward
+
+skill_context:
+  plan_top_k: 3
+  skill_top_k_per_step: 5
+  final_max_skills: 8
+  dedup_similarity_threshold: 0.95
+  mmr_lambda: 0.75
+  enable_skill_graph: true

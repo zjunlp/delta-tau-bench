@@ -1,0 +1,29 @@
+# Public, credential-free configuration. Set the DTAU_* environment variables
+# below, or add your own model entries and pass their keys to the CLI.
+# The defaults expect local OpenAI-compatible chat and embedding services.
+models:
+  deepseek-v4-pro:
+    model_name: "${DTAU_AGENT_MODEL:-deepseek-v4-pro}"
+    base_url: "${DTAU_AGENT_BASE_URL:-http://localhost:8000/v1}"
+    api_key: "${DTAU_AGENT_API_KEY:-EMPTY}"
+    max_tokens: 65536
+    reasoning_effort: high
+    supports_tools: true
+  deepseek-flash:
+    model_name: "${DTAU_USER_MODEL:-deepseek-flash}"
+    base_url: "${DTAU_USER_BASE_URL:-http://localhost:8000/v1}"
+    api_key: "${DTAU_USER_API_KEY:-EMPTY}"
+    max_completion_tokens: 4096
+    reasoning_effort: high
+    supports_tools: true
+
+embedding:
+  default:
+    backend: openai_http
+    model: "${DTAU_EMBEDDING_MODEL:-Qwen3-Embedding-0.6B}"
+    base_url: "${DTAU_EMBEDDING_BASE_URL:-http://localhost:8009/v1}"
+    api_key: "${DTAU_EMBEDDING_API_KEY:-EMPTY}"
+    batch_size: 8
+    request_timeout: 600
+    max_retries: 2
+    retry_delay: 1

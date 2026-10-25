@@ -1,0 +1,40 @@
+# Default hyperparameters for rollout and related modules.
+# These can be overridden by CLI arguments.
+
+rollout:
+  # Maximum number of agent-user turns in one conversation
+  max_turns: 20
+  # Maximum tool calls per agent turn
+  max_steps_per_turn: 10
+  # Agent LLM temperature
+  agent_temperature: 0.7
+  # Simulated user LLM temperature
+  user_temperature: 1.0
+  # Timeout for agent LLM call (seconds)
+  agent_timeout: 180
+  # Timeout for simulated user LLM call (seconds)
+  user_timeout: 120
+  # Shared dtau_bench-managed retry config for rollout LLM calls (agent + simulated user)
+  llm_max_retries: 50
+  llm_retry_initial_delay: 2
+  llm_retry_max_delay: 60
+  llm_retry_total_timeout: 1200
+  llm_retry_jitter: true
+  # Retry an entire sample from scratch when it fails due to a transient LLM error
+  sample_max_retries: 3
+  sample_retry_initial_delay: 20
+  sample_retry_max_delay: 300
+
+parallel:
+  # Number of domains to process in parallel
+  max_domain_workers: 1
+  # Number of queries to process in parallel within each domain
+  max_query_workers: 4
+
+checkpoint:
+  # Enable checkpoint-based resume
+  enabled: true
+
+output:
+  # JSONL output format version
+  format_version: "1.0"

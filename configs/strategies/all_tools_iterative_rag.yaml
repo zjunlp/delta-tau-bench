@@ -1,0 +1,11 @@
+# Strategy: all_tools_iterative_rag
+
+strategy: all_tools_iterative_rag
+
+retrieval:
+  top_k_init: 15
+  top_k_turn: 5
+  similarity_threshold: 0.0
+
+virtual_tools:
+  - retrieve_tools

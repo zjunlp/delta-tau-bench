@@ -1,0 +1,62 @@
+# Strategy: steward
+
+strategy: steward
+
+skill_context:
+  plan_top_k: 5
+  skill_top_k_per_step: 5
+  tool_top_k_per_step: 3
+  final_max_skills: 8
+  dedup_similarity_threshold: 0.95
+  mmr_lambda: 0.75
+  enable_skill_graph: true
+
+retrieval:
+  top_k_init: 15
+  top_k_turn: 5
+  similarity_threshold: 0.0
+
+explorer:
+  enabled: true
+  tool_name: explore_capabilities
+
+  max_explore_calls_per_session: 3
+
+  max_actions: 20
+  max_llm_turns: 24
+  hard_timeout_s: 360
+
+  # Per-action result limits
+  search_skills_top_k: 5
+  search_tools_top_k: 8
+  expand_graph_limit: 8
+
+  max_skill_chars: 1500
+  max_report_chars: 6400
+  max_commit_tools: 8
+  card_summary_chars: 120 
+
+  initial_injection: full
+  persist_report_as_system: false
+
+  max_commit_skills: 2
+  max_committed_skill_chars_per_session: 4000
+  persist_skills_as_system: true
+  commit_skill_auto_tools: false
+
+  recent_user_messages: 3
+  recent_tool_errors: 3
+  include_pseudo_plan: true
+  exclude_injected_skills: true
+  max_context_chars: 1200
+
+  allow_readonly_probe: false
+
+  trace_dir_name: explore_traces
+  trace_full_messages: true
+
+  temperature: 0.3
+
+virtual_tools:
+  - retrieve_tools
+  - explore_capabilities

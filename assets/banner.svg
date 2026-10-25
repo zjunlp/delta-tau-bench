@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="420" viewBox="0 0 1440 420" role="img" aria-labelledby="title desc">
+  <title id="title">Δτ-Bench</title>
+  <desc id="desc">Pushing agents toward a moving capability frontier. An executable benchmark with 42 domains, 1,588 tasks, and six evolving tool ecosystems.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#101d32"/>
+      <stop offset="1" stop-color="#123b43"/>
+    </linearGradient>
+    <linearGradient id="accent">
+      <stop stop-color="#7ce4d2"/>
+      <stop offset="1" stop-color="#8abaff"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#bceee7" stroke-opacity=".045"/>
+    </pattern>
+  </defs>
+  <rect width="1440" height="420" rx="24" fill="url(#bg)"/>
+  <rect width="1440" height="420" rx="24" fill="url(#grid)"/>
+  <path d="M805 420C910 315 1055 416 1185 246S1380 80 1440 92" fill="none" stroke="#7ce4d2" stroke-opacity=".08" stroke-width="80"/>
+  <g font-family="Inter, DejaVu Sans, Arial, sans-serif">
+    <rect x="54" y="45" width="6" height="19" rx="3" fill="#7ce4d2"/>
+    <text x="75" y="60" font-size="16" font-weight="600" letter-spacing="3" fill="#9bc9cf">EVOLVING TOOL ECOSYSTEMS</text>
+    <text x="51" y="157" font-size="78" font-weight="700" letter-spacing="-3" fill="#f7fafc">Δτ<tspan fill="url(#accent)">-Bench</tspan></text>
+    <text x="56" y="209" font-size="26" fill="#e3ebf3">Pushing agents toward a</text>
+    <text x="56" y="248" font-size="26" fill="#7ce4d2">moving capability frontier.</text>
+    <path d="M56 286H642" stroke="#92bac8" stroke-opacity=".25"/>
+    <text x="56" y="329" font-size="27" font-weight="600" fill="#f7fafc">42<tspan x="230">1,588</tspan><tspan x="455">6</tspan></text>
+    <text x="56" y="356" font-size="15" fill="#a5becd">Domains<tspan x="230">Multi-turn tasks</tspan><tspan x="455">Ecosystem versions</tspan></text>
+    <text x="808" y="70" font-size="14" font-weight="600" letter-spacing="2" fill="#a5becd">SAME GOAL. EVOLVING PATHS.</text>
+    <g stroke="#6896a6" stroke-opacity=".45" fill="#142d40">
+      <rect x="797" y="103" width="167" height="192" rx="16"/>
+      <rect x="1000" y="103" width="167" height="192" rx="16"/>
+      <rect x="1203" y="103" width="167" height="192" rx="16"/>
+    </g>
+    <g font-size="14" font-weight="600" fill="#c4d9e4">
+      <text x="820" y="134">v1</text><text x="1023" y="134">v2</text><text x="1226" y="134">v6</text>
+    </g>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M829 174L879 225L930 174" stroke="#88baff"/>
+      <path d="M829 251L879 225L930 251" stroke="#88baff" opacity=".3"/>
+      <path d="M1032 174L1133 251M1032 251L1083 213L1133 174" stroke="#88baff" opacity=".25"/>
+      <path d="M1032 174H1133L1083 251" stroke="#7ce4d2"/>
+      <path d="M1235 174L1286 251L1336 174" stroke="#88baff" opacity=".3" stroke-dasharray="4 7"/>
+      <path d="M1235 174H1336" stroke="#7ce4d2"/>
+    </g>
+    <g fill="#264761" stroke="#88baff" stroke-width="2">
+      <circle cx="829" cy="174" r="10"/><circle cx="879" cy="225" r="10"/><circle cx="930" cy="174" r="10"/>
+      <circle cx="829" cy="251" r="7" opacity=".4"/><circle cx="930" cy="251" r="7" opacity=".4"/>
+      <circle cx="1032" cy="174" r="10"/><circle cx="1133" cy="174" r="10"/>
+      <circle cx="1032" cy="251" r="7" opacity=".4"/><circle cx="1133" cy="251" r="7" opacity=".4"/>
+      <circle cx="1235" cy="174" r="10"/><circle cx="1336" cy="174" r="10"/>
+      <circle cx="1286" cy="251" r="9" opacity=".3"/>
+    </g>
+    <g fill="#7ce4d2" stroke="#153c48" stroke-width="3">
+      <rect x="1069" y="237" width="28" height="28" rx="7"/>
+      <rect x="1272" y="160" width="28" height="28" rx="7"/>
+    </g>
+    <g fill="none" stroke="#a5becd" stroke-width="2" stroke-linecap="round">
+      <path d="M974 200H990M985 195L990 200L985 205"/>
+      <path d="M1179 200H1192M1187 195L1192 200L1187 205"/>
+    </g>
+    <text x="878" y="333" text-anchor="middle" font-size="14" fill="#a5becd">Discover</text>
+    <text x="1083" y="333" text-anchor="middle" font-size="14" fill="#a5becd">Adapt</text>
+    <text x="1286" y="333" text-anchor="middle" font-size="14" fill="#7ce4d2">Improve</text>
+  </g>
+</svg>
