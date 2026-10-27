@@ -1,14 +1,13 @@
 <div align="center">
 
-<h1>Δτ-Bench: Pushing Agents Toward a Moving Capability Frontier</h1>
+<h1>Δτ-Bench: Pushing Agents Toward a Moving Capability</h1>
 
 <p><strong>An executable benchmark for agents that discover, adapt, and improve as the tool ecosystem evolves.</strong></p>
 
 <p>
   <a href="https://github.com/zjunlp/delta-tau-bench"><img src="https://img.shields.io/badge/Code-Delta--Tau--Bench-fc60a8?style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;labelColor=1a1a2e" alt="Code: Delta-Tau-Bench" /></a>
   <a href="https://huggingface.co/datasets/zjunlp/delta-tau-bench"><img src="https://img.shields.io/badge/Dataset-Hugging%20Face-ffce44?style=for-the-badge&amp;logo=huggingface&amp;logoColor=white&amp;labelColor=1a1a2e" alt="Dataset on Hugging Face" /></a>
-  <!-- Replace the citation anchor with the paper URL when available. -->
-  <a href="#citation"><img src="https://img.shields.io/badge/Paper-Coming%20Soon-ff6b6b?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white&amp;labelColor=1a1a2e" alt="Paper: coming soon" /></a>
+  <a href="https://arxiv.org/abs/2610.34238"><img src="https://img.shields.io/badge/arXiv-2610.34238-ff6b6b?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white&amp;labelColor=1a1a2e" alt="arXiv: 2610.34238" /></a>
   <a href="https://github.com/zjunlp/delta-tau-bench/stargazers"><img src="https://img.shields.io/github/stars/zjunlp/delta-tau-bench?color=00d9ff&amp;style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;labelColor=1a1a2e" alt="GitHub stars" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-4ecdc4?style=for-the-badge&amp;logo=opensourceinitiative&amp;logoColor=white&amp;labelColor=1a1a2e" alt="License: MIT" /></a>
 </p>
@@ -519,10 +518,18 @@ For individual stages, use `python -m dtau_bench <command> --help`. Available co
 
 If you find Δτ-Bench useful in your research, please consider citing our work.
 
-> 📄 **Coming soon:** the paper link and BibTeX citation will be added here.
+📄 [Read the paper on arXiv](https://arxiv.org/abs/2610.34238).
 
 ```bibtex
-% BibTeX citation coming soon.
+@misc{qiao2026deltataubenchpushingagentsmoving,
+      title={$\Delta\tau$-Bench: Pushing Agents Toward a Moving Capability},
+      author={Shuofei Qiao and Xuanguang Pan and Yijun Chen and Wendi Feng and Bin Wu and Runnan Fang and Yuqi Zhu and Shumin Deng and Emine Yilmaz},
+      year={2026},
+      eprint={2610.34238},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2610.34238},
+}
 ```
 
 <a id="license"></a>
