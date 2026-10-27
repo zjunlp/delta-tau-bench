@@ -2,8 +2,7 @@
 
 <h1>Δτ-Bench: Pushing Agents Toward a Moving Capability Frontier</h1>
 
-<p><strong>An executable benchmark for agents that discover, adapt, and improve as tools evolve.</strong></p>
-<p>Multi-turn tasks · Stateful environments · Versioned tools · Outcome-based evaluation</p>
+<p><strong>An executable benchmark for agents that discover, adapt, and improve as the tool ecosystem evolves.</strong></p>
 
 <p>
   <a href="https://github.com/zjunlp/delta-tau-bench"><img src="https://img.shields.io/badge/Code-Delta--Tau--Bench-fc60a8?style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;labelColor=1a1a2e" alt="Code: Delta-Tau-Bench" /></a>
